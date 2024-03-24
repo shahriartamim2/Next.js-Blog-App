@@ -5,7 +5,7 @@ import styles from "./authLinks.module.css";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
-
+  const status = "unauthenticated";
   return (
     <>
       {status === "unauthenticated" ? (
@@ -20,10 +20,35 @@ const AuthLinks = () => {
           <span className={styles.link}>Logout</span>
         </>
       )}
-      <div className={styles.burger}>
+      <div
+        className={styles.burger}
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
         <div className={styles.line}></div>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
+
+        {open && (
+          <div className={styles.responsiveMenu}>
+            <Link href="/">Homepage</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+            {status === "unauthenticated" ? (
+              <Link href="/login" >
+                Login
+              </Link>
+            ) : (
+              <>
+                <Link href="/write" >
+                  Write
+                </Link>
+                <span >Logout</span>
+              </>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
