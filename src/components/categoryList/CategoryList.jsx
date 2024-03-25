@@ -8,7 +8,7 @@ const CategoryList = () => {
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
         <Link
-          href="/blog/cat=style"
+          href="/blog?cat=style"
           className={`${styles.category} ${styles.style}`}
         >
           <Image

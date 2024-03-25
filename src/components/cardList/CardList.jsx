@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./cardList.module.css";
 import Card from "../card/Card";
+import Menu from "../Menu/Menu";
+import Pagination from "../pagination/Pagination";
 
 function CardList() {
   return (
@@ -9,6 +11,9 @@ function CardList() {
       <div className={styles.posts}>
         <Card />
         <Card />
+        <Card />
+        <Card />
+        <Pagination/>
       </div>
     </div>
   );
