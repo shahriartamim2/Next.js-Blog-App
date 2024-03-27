@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 import styles from "./writePage.module.css";
 
 const page = () => {
@@ -30,7 +31,7 @@ const page = () => {
         )}
         <ReactQuill
           className={styles.textArea}
-          theme="bubble"
+          theme="snow"
           value={value}
           onChange={setValue}
           placeholder="Tell your story..."
