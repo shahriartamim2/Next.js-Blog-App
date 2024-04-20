@@ -6,7 +6,8 @@ import styles from "./authLinks.module.css";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
-  const {status} = useSession();
+  // const {status} = useSession();
+  const status = "authenticated";
   return (
     <>
       {status === "unauthenticated" ? (
