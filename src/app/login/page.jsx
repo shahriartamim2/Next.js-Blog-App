@@ -3,13 +3,13 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import styles from "./loginPage.module.css";
 
-const page = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+const Page = () => {
+
   const { data, status } = useSession();
 
   console.log(data, status);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+
   const router = useRouter();
 
   if (status === "loading") {
@@ -32,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
